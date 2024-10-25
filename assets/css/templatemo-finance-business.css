@@ -43,6 +43,11 @@ a.filled-button {
 	display: inline-block;
 	transition: all 0.3s;
 }
+.navbar-brand h2 {
+    font-family: 'Raleway', sans-serif; /* Use the selected Google Font */
+    font-size: 24px;
+
+}
 
 a.filled-button:hover {
 	background-color: #fff;
@@ -742,7 +747,7 @@ ul.slick-dots {
 /* More Info */
 
 .more-info {
-	margin-top: 140px;
+	margin-top: 100px;
 }
 
 .more-info .left-image img {
@@ -854,7 +859,7 @@ ul.slick-dots {
 }
 
 .callback-form {
-	margin-top: 45px;
+	margin-top: 0px;
 }
 
 .callback-form .contact-form {
