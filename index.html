@@ -150,7 +150,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <p style="font-size: 18px; color: white;">Dare a trial and you will be glued to us...</p>
+            <p style="font-size: 18px; color: white;">Give us a try, and you'll keep coming back...</p>
             <h4>Reach out to us today.</h4>
             <!-- <span>For more enquires</span> -->
           </div>
@@ -476,7 +476,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Dare a trial and you will be glued to us... <br> <em>Send us a Message</em></h2>
+              <h2 style="padding-top: 30px;">Give us a try, and you'll keep coming back... <br> <em>Send us a Message</em></h2>
               <!-- <span>Etiam suscipit ante a odio consequat</span> -->
             </div>
           </div>
@@ -666,6 +666,15 @@
       disableOnInteraction: false,
     },
     loop: true,
+    autoHeight: true,
+    on: {
+    slideChangeTransitionStart: function () {
+      adjustSlideHeight();
+    },
+    init: function () {
+      adjustSlideHeight();
+    },
+  },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -674,7 +683,28 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    
   });
+
+  function adjustSlideHeight() {
+  const slides = document.querySelectorAll('.swiper-slide');
+  slides.forEach(slide => {
+    slide.style.height = 'auto'; // Reset height
+  });
+
+  // Get the maximum height of all slides
+  let maxHeight = 0;
+  slides.forEach(slide => {
+    maxHeight = Math.max(maxHeight, slide.offsetHeight);
+  });
+
+  // Apply the maximum height to all slides
+  slides.forEach(slide => {
+    slide.style.height = `${maxHeight}px`;
+  });
+
+  // Update Swiper's container height
+  swiper.updateAutoHeight();}
 </script>
 
 
