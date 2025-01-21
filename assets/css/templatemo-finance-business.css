@@ -396,7 +396,7 @@ header .navbar {
 }
 
 .Modern-Slider .item-2 .img-fill {
-	background-image: url(../images/financial-ana.jpg);
+	background-image: url(../images/financials.jpg);
 }
 
 .Modern-Slider .item-3 .img-fill {
@@ -1327,6 +1327,50 @@ footer .contact-form button.filled-button:hover {
 	font-size: 15px;
 }
 
+
+/* General styles for the media section */
+.media-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the text content */
+  .media-content {
+	flex: 1;
+	text-align: left;
+	padding-left: 20px;
+  }
+  
+  .media-content h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 10px;
+  }
+  
+  .media-content p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #555;
+  }
+  
+  /* Styles for the image */
+  .media-image {
+	flex: 1;
+	text-align: left;
+  }
+  
+  .media-image img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	background-color: transparent;
+	box-shadow: none;
+  }
 
 
 
